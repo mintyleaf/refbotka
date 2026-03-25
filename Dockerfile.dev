@@ -7,12 +7,16 @@ ENV UV_CACHE_DIR=/root/.cache/uv \
     VIRTUAL_ENV=/venv \
     PATH="/venv/bin:$PATH"
 
-RUN apk add --no-cache git
+# botka provided via: --build-context botka=../botka
+COPY --from=botka . /botka/
 
 RUN uv venv /venv
 
 COPY pyproject.toml /app/
 COPY src /app/src
+
+# Rewrite the local path (../botka) to the in-container path (/botka)
+RUN sed -i 's|path = "\.\./botka"[^}]*|path = "/botka"|' pyproject.toml
 
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv pip install .

@@ -199,7 +199,7 @@ wheels = [
 [[package]]
 name = "botka"
 version = "0.1.0"
-source = { git = "https://github.com/mintyleaf/botka?rev=python-version-splits#68d56c0e108634faa56c91ced7e85f8918a0d461" }
+source = { git = "https://github.com/mintyleaf/botka?rev=python-version-splits#bb38f34b6fd0e3539e83ac16fb4d1e3323dfd44b" }
 dependencies = [
     { name = "aiogram" },
     { name = "aiosqlite" },
