@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refbotka"
+version = "0.1.0"
+description = "Telegram bot with refinance functionality"
+requires-python = ">=3.12"
+dependencies = [
+    "botka",
+    "greenlet>=3.3.2",
+]
+
+[tool.uv.sources]
+botka = { git = "https://github.com/mintyleaf/botka", branch = "python-version-splits" }
+
+[project.scripts]
+refbotka = "refbotka.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

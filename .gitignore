@@ -1,0 +1,6 @@
+.env
+data/
+
+# AISlop
+.claude
+CLAUDE.md
