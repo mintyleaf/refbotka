@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-botka = { git = "https://github.com/mintyleaf/botka", branch = "python-version-splits" }
+botka = { git = "https://github.com/mintyleaf/botka", rev = "python-version-splits" }
 
 [project.scripts]
 refbotka = "refbotka.main:main"

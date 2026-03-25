@@ -199,7 +199,7 @@ wheels = [
 [[package]]
 name = "botka"
 version = "0.1.0"
-source = { git = "https://github.com/mintyleaf/botka?branch=python-version-splits#68d56c0e108634faa56c91ced7e85f8918a0d461" }
+source = { git = "https://github.com/mintyleaf/botka?rev=python-version-splits#68d56c0e108634faa56c91ced7e85f8918a0d461" }
 dependencies = [
     { name = "aiogram" },
     { name = "aiosqlite" },
@@ -834,7 +834,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "botka", git = "https://github.com/mintyleaf/botka?branch=python-version-splits" },
+    { name = "botka", git = "https://github.com/mintyleaf/botka?rev=python-version-splits" },
     { name = "greenlet", specifier = ">=3.3.2" },
 ]
 
